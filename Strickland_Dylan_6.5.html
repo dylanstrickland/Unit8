@@ -1,0 +1,36 @@
+<!--
+Strickland, Dylan
+ID# 1540926
+Assignment 6.5
+-->
+
+<!doctype HTML>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Tip Calculator</title>
+	</head>
+	<body>
+		<h1>Tip Calculator</h1>
+		<p>
+			<label>Bill Amount $<input type = "number" id="bill" value="Bill Amount"/></label><br>
+			<label>Tip Rate (%)<input type = "number" id="tip" value="Tip Rate" /></label><br>
+			<button id="calculate">calculate</button>
+		</p>
+		<p id="result"></p>
+		<script>
+		var report = function (bill, tip) {
+	document.getElementById("result").innerHTML = "The Bill amount (including tip) is $" +
+	(+bill + (bill * tip));
+};
+
+document.getElementById("calculate").onclick = function () {
+	var bill = document.getElementById("bill").value;
+	var tip =  document.getElementById("tip").value;
+	report(bill, tip / 100);
+};
+
+		
+		</script>
+	</body>
+</html>
